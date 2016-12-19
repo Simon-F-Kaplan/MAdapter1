@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using MessageAdapter.Interfaces;
 
 namespace MessageAdapter.AddABook
 {
     [Serializable]
     [XmlRoot(ElementName = "KPPortalResourceManager", Namespace = "http://schemas.kaplan.co.uk/messages/2009/03/KPPortalResourceManager")]
-    public class KPPortalResourceManager
+    public class KPPortalResourceManager : INavisionMessage
     {
         protected DateTime messageCreatedDate;
         protected string messageId;

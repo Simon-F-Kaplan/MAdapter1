@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.Tests", "Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.AddABook", "MessageAdapter.AddABook\MessageAdapter.AddABook.csproj", "{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.Interfaces", "MessageAdapter.Interfaces\MessageAdapter.Interfaces.csproj", "{90470D1A-6459-4261-8FBF-29E230BADE3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90470D1A-6459-4261-8FBF-29E230BADE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90470D1A-6459-4261-8FBF-29E230BADE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90470D1A-6459-4261-8FBF-29E230BADE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90470D1A-6459-4261-8FBF-29E230BADE3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

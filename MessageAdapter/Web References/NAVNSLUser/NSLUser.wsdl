@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/NSLUser" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/NSLUser" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x50021" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50021" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="email">
+        <sequence />
+        <attribute name="type" type="string" use="required" />
+        <attribute name="address" type="string" use="required" />
+      </complexType>
+      <complexType name="emails" mixed="true">
+        <sequence>
+          <element minOccurs="1" maxOccurs="unbounded" name="email" type="tns:email" />
+        </sequence>
+      </complexType>
+      <complexType name="address">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="companyName" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="line1" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="line2" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="line3" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="city" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="regionCode" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="postalCode" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+        </sequence>
+        <attribute name="number" type="string" use="required" />
+        <attribute name="id" type="string" use="required" />
+        <attribute name="type" type="string" use="required" />
+        <attribute name="shipToName" type="string" use="required" />
+        <attribute name="isPrimary" type="string" use="required" />
+      </complexType>
+      <complexType name="addresses" mixed="true">
+        <sequence>
+          <element minOccurs="1" maxOccurs="unbounded" name="address" type="tns:address" />
+        </sequence>
+      </complexType>
+      <complexType name="phone">
+        <sequence />
+        <attribute name="type" type="string" use="required" />
+        <attribute name="number" type="string" use="required" />
+      </complexType>
+      <complexType name="phones" mixed="true">
+        <sequence>
+          <element minOccurs="1" maxOccurs="unbounded" name="phone" type="tns:phone" />
+        </sequence>
+      </complexType>
+      <complexType name="person">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="personId" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="personGuid" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="masterGuid" type="string" />
+          <element minOccurs="1" maxOccurs="unbounded" name="emails" type="tns:emails" />
+          <element minOccurs="1" maxOccurs="unbounded" name="addresses" type="tns:addresses" />
+          <element minOccurs="1" maxOccurs="unbounded" name="phones" type="tns:phones" />
+          <element minOccurs="0" maxOccurs="1" name="firstName" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="lastName" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="title" type="string" />
+        </sequence>
+        <attribute name="originator" type="string" use="required" />
+        <attribute name="sender" type="string" use="required" />
+        <attribute name="messageType" type="string" use="required" />
+        <attribute name="messageCreatedDate" type="string" use="required" />
+      </complexType>
+      <element name="person" type="tns:person" />
+    </schema>
+    <schema xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x50028" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50028" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="profile">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="personId" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="personGuid" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="masterGuid" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="preferredQualification" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="receiveOffersAndPromotions" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="dateOfBirth" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="instituteRegNo" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="country" type="string" />
+        </sequence>
+        <attribute name="originator" type="string" use="required" />
+        <attribute name="sender" type="string" use="required" />
+        <attribute name="messageType" type="string" use="required" />
+        <attribute name="messageCreatedDate" type="string" use="required" />
+      </complexType>
+      <element name="profile" type="tns:profile" />
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/NSLUser" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Test">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Test_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Person">
+        <complexType>
+          <sequence>
+            <element xmlns:q1="urn:microsoft-dynamics-nav/xmlports/x50021" minOccurs="1" maxOccurs="1" name="nSLPerson" type="q1:person" />
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Person_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Profile">
+        <complexType>
+          <sequence>
+            <element xmlns:q2="urn:microsoft-dynamics-nav/xmlports/x50028" minOccurs="1" maxOccurs="1" name="nSLProfile" type="q2:profile" />
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Profile_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseText" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Test">
+    <part name="parameters" element="tns:Test" />
+  </message>
+  <message name="Test_Result">
+    <part name="parameters" element="tns:Test_Result" />
+  </message>
+  <message name="Person">
+    <part name="parameters" element="tns:Person" />
+  </message>
+  <message name="Person_Result">
+    <part name="parameters" element="tns:Person_Result" />
+  </message>
+  <message name="Profile">
+    <part name="parameters" element="tns:Profile" />
+  </message>
+  <message name="Profile_Result">
+    <part name="parameters" element="tns:Profile_Result" />
+  </message>
+  <portType name="NSLUser_Port">
+    <operation name="Test">
+      <input name="Test" message="tns:Test" />
+      <output name="Test_Result" message="tns:Test_Result" />
+    </operation>
+    <operation name="Person">
+      <input name="Person" message="tns:Person" />
+      <output name="Person_Result" message="tns:Person_Result" />
+    </operation>
+    <operation name="Profile">
+      <input name="Profile" message="tns:Profile" />
+      <output name="Profile_Result" message="tns:Profile_Result" />
+    </operation>
+  </portType>
+  <binding name="NSLUser_Binding" type="tns:NSLUser_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Test">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NSLUser:Test" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Test">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Test_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Person">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NSLUser:Person" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Person">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Person_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Profile">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NSLUser:Profile" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Profile">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Profile_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NSLUser">
+    <port name="NSLUser_Port" binding="tns:NSLUser_Binding">
+      <address location="http://del-int-sql04.delta.kaplaninc.com:17001/DynamicsNAV/WS/The%20Financial%20Training%20Company/Codeunit/NSLUser" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

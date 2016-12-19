@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.Person", "MessageAdapter\MessageAdapter.Person.csproj", "{696C8A88-7B3F-4665-AC5A-CE83B4F40262}"
 EndProject
@@ -9,22 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.Profile", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.Tests", "MessageAdapter.Tests\MessageAdapter.Tests.csproj", "{61767344-A9A9-4C69-876F-78B7A29FD2E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageAdapter.AddABook", "MessageAdapter.AddABook\MessageAdapter.AddABook.csproj", "{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://del-tfs-03:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MessageAdapter\\MessageAdapter.Person.csproj
-		SccProjectName1 = MessageAdapter
-		SccLocalPath1 = MessageAdapter
-		SccProjectUniqueName2 = MessageAdapter.Profile\\MessageAdapter.Profile.csproj
-		SccProjectName2 = MessageAdapter.Profile
-		SccLocalPath2 = MessageAdapter.Profile
-		SccProjectUniqueName3 = MessageAdapter.Tests\\MessageAdapter.Tests.csproj
-		SccProjectName3 = MessageAdapter.Tests
-		SccLocalPath3 = MessageAdapter.Tests
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -42,6 +29,10 @@ Global
 		{61767344-A9A9-4C69-876F-78B7A29FD2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61767344-A9A9-4C69-876F-78B7A29FD2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61767344-A9A9-4C69-876F-78B7A29FD2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1FE073-5FBF-4451-BC7B-7FAA25A6D259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,9 @@ namespace MessageAdapter.Interfaces
         {
             get;
         }
+
+        DateTime MessageCreatedDate
+        { get; }
     }
 }
 

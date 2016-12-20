@@ -140,8 +140,8 @@ namespace MessageAdapter.Tests
             person.Title = "Ms";
             string createdBy = "TestUser";
             bool Republish = false;
-            var result = MessageAdapter.Utilities.Utility.CreatePersonAsync(person, createdBy,Republish).Result;
-         
+            var result = MessageAdapter.Utilities.Utility.CreatePersonAsync(person, createdBy, Republish).Result;
+
         }
 
 
@@ -176,7 +176,7 @@ namespace MessageAdapter.Tests
             person.Emails = emails;
             person.PersonID = 8234;
 
-           
+
             EmailTypes type = (EmailTypes)Enum.ToObject(typeof(EmailTypes), 1);
             email.EmailType = type;
             emails.Add(email);
@@ -191,39 +191,39 @@ namespace MessageAdapter.Tests
             person.LastName = "Kaplan123";
             person.Title = "Miss";
             bool Republish = false;
-            var result = MessageAdapter.Utilities.Utility.UpdatePerson(guid, person, updatedBy,Republish).Result;
+            var result = MessageAdapter.Utilities.Utility.UpdatePerson(guid, person, updatedBy, Republish).Result;
 
         }
 
         /// <summary>
         /// Tests the get person by person unique identifier.
         /// </summary>
-         [TestMethod]
+        [TestMethod]
         public void TestGetPersonByPersonGuid()
         {
             Guid guid = new Guid("2E5DA098-91D6-40C4-95BC-98B206F8A36F");
             var result = MessageAdapter.Utilities.Utility.GetPersonByGuid(guid).Result;
         }
 
-         /// <summary>
-         /// Tests the create address.
-         /// </summary>
-         [TestMethod]
-         public void TestCreateAddress()
-         {
-             AddressDTO ad = new AddressDTO();
-             ad.AddressID = 0;
-             ad.Line1 = "11 Main Street";
-             ad.Line2 = "";
-             ad.City = "London";
-             ad.CountryCode = "UK";
-             ad.PostalCode = "SW1A 2EE";
-             ad.SuggestionWasSelected = false;
-             ad.SuggestionLimit = 2;
+        /// <summary>
+        /// Tests the create address.
+        /// </summary>
+        [TestMethod]
+        public void TestCreateAddress()
+        {
+            AddressDTO ad = new AddressDTO();
+            ad.AddressID = 0;
+            ad.Line1 = "11 Main Street";
+            ad.Line2 = "";
+            ad.City = "London";
+            ad.CountryCode = "UK";
+            ad.PostalCode = "SW1A 2EE";
+            ad.SuggestionWasSelected = false;
+            ad.SuggestionLimit = 2;
 
-             AddressValidationResultDTO result = MessageAdapter.Utilities.Utility.CreateAddress(ad).Result;
-             Assert.IsNotNull(result);
-         }
+            AddressValidationResultDTO result = MessageAdapter.Utilities.Utility.CreateAddress(ad).Result;
+            Assert.IsNotNull(result);
+        }
         #endregion
 
         #region --Utility Methods--
@@ -258,7 +258,19 @@ namespace MessageAdapter.Tests
             var result = MessageAdapter.Utilities.Utility.GetPerson(personXml);
         }
         #endregion
+        #region --Add a book--
+        [TestMethod]
+        public void CreateAddaBookMessage()
+        {
+            Assert.Inconclusive("Method not created yet");
+        }
 
+        [TestMethod]
+        public void MessageToNAVFormat()
+        {
+            Assert.Inconclusive("Method not created yet");
+        }
+        #endregion
         #endregion
     }
 }
